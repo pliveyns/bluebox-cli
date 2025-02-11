@@ -11,6 +11,6 @@ COPY ../packages/bluebox_*.packages /
 
 # Run the setup scripts
 RUN chmod +x *_packages.sh && \
-    /dnf_packafes.sh && \
+    /dnf_packages.sh && \
     /bin_packages.sh &&\
     rm /*_packages.sh /bluebox_*.packages
