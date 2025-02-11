@@ -1,0 +1,14 @@
+FROM quay.io/fedora/fedora-toolbox:latest
+
+LABEL com.github.containers.toolbox="true" \
+      usage="This image is meant to be used with the toolbox or distrobox command" \
+      summary="This is my main toolbox cli container." \
+      maintainer="peter.liveyns@gmail.com"
+
+# Copy the setup scripts and package list
+COPY ../scripts/dnf_packages.sh /
+COPY ../packages/bluebox_dnf.packages /
+
+# Run the setup scripts
+RUN chmod +x dnf_packages.sh /dnf_packages.sh
+RUN rm /dnf_packages.sh /bluebox_dnf.packages

@@ -1,0 +1,48 @@
+dnf:
+  - zsh
+  - neovim
+  - fastfetch
+  - inxi
+  - wget
+  - curl
+  - rclone
+  - ranger
+  - mc
+  - restic
+  - p7zip
+  - p7zip-plugins
+  - ncdu
+  - btop
+  - par2cmdline
+  - bat
+  - nmap-ncat
+  - pandoc
+  - ripgrep
+  - tig
+  - w3m
+  - eza
+  - speedtest-cli
+  - dbus-x11
+  - direnv
+  - ncurses
+  - wl-clipboard
+  - gcc
+  - make
+  - nodejs-npm
+  - dconf
+  - fzf
+  - virt-viewer
+  - zstd
+  - kitty-terminfo
+  - freerdp
+  - butane
+rpm:
+  - chezmoi: https://github.com/twpayne/chezmoi/releases/download/v2.57.0/chezmoi-2.57.0-x86_64.rpm
+  - glow: https://github.com/charmbracelet/glow/releases/download/v2.0.0/glow-2.0.0-1.x86_64.rpm
+  - cosign: https://github.com/sigstore/cosign/releases/download/v2.4.1/cosign-2.4.1-1.x86_64.rpm
+tar:
+  - zellij: https://github.com/zellij-org/zellij/releases/download/v0.41.2/zellij-x86_64-unknown-linux-musl.tar.gz
+binary:
+  - nb: https://raw.github.com/xwmx/nb/master/nb
+  - host-spawn: https://github.com/1player/host-spawn/releases/download/v1.6.1/host-spawn-x86_64
+
