@@ -6,9 +6,11 @@ LABEL com.github.containers.toolbox="true" \
       maintainer="peter.liveyns@gmail.com"
 
 # Copy the setup scripts and package list
-COPY ../scripts/dnf_packages.sh /
-COPY ../packages/bluebox_dnf.packages /
+COPY ../scripts/*_packages.sh /
+COPY ../packages/bluebox_*.packages /
 
 # Run the setup scripts
-RUN chmod +x dnf_packages.sh /dnf_packages.sh
-RUN rm /dnf_packages.sh /bluebox_dnf.packages
+RUN chmod +x *_packages.sh && \
+    /dnf_packafes.sh && \
+    /bin_packages.sh &&\
+    rm /*_packages.sh /bluebox_*.packages

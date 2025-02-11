@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 #
-# Install binary packages from recipe.yml
+# Install binary packages from bluebox_bin.packages
 #
 
-echo "--- Installing binary packages from download link in recipe.yml --" && \
+echo "--- Installing binary packages from download link in bluebox_bin.packages --" && \
 
-binary_packages=$(yq '.binary[]' < /tmp/config/recipe.yml | sed -e "s/: /\&/") && \
+binary_packages=$(cat ./bluebox_bin.packages) && \
 for pkg in $binary_packages; do \
-  bin=$(echo $pkg | cut -d'&' -f1 -); \
-  url=$(echo $pkg | cut -d'&' -f2 -); \
+  bin=$(echo $pkg | cut -d':' -f1 -); \
+  url=$(echo $pkg | cut -d' ' -f2 -); \
   echo "Installing: ${bin}" && \
   curl -L $url -o /usr/local/bin/$bin; \
   chmod +x /usr/local/bin/$bin; \
