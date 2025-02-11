@@ -10,7 +10,7 @@ p7zip
 p7zip-plugins
 ncdu
 btop
-pa2cmdline
+par2cmdline
 bat
 pandoc
 ripgrep
