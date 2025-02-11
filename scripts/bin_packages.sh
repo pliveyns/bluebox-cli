@@ -5,8 +5,8 @@
 
 echo "--- Installing binary packages from download link in bluebox_bin.packages --" && \
 
-binary_packages=$(cat ./bluebox_bin.packages) && \
-for pkg in $binary_packages; do \
+#binary_packages=$(cat ./bluebox_bin.packages) && \
+for pkg in bluebox_bin.packages; do \
   bin=$(echo $pkg | cut -d':' -f1 -); \
   url=$(echo $pkg | cut -d' ' -f2 -); \
   echo "Installing: ${bin}" && \
