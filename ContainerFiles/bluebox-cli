@@ -13,4 +13,5 @@ COPY ../packages/bluebox_*.packages /
 RUN chmod +x *_packages.sh && \
     /dnf_packages.sh && \
     /bin_packages.sh &&\
+    /rpm_packages.sh &&\
     rm /*_packages.sh /bluebox_*.packages
