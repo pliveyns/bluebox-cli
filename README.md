@@ -18,19 +18,20 @@ Check out https://github.com/ublue-os/boxkit to create your own.
 
 ## Using the custom images
 
-If you use distrobox:
+Toolbox bluebox-cli:
 
     distrobox create -i ghcr.io/pliveyns/bluebox-cli -n bluebox-cli
     distrobox enter bluebox-cli
     
-If you use toolbox:
+Toolbox iotbox-cli:
 
-    toolbox create -i ghcr.io/pliveyns/bluebox-cli -c bluebox-cli
-    toolbox enter bluebox-cli
-
+    distrobox create -i ghcr.io/pliveyns/iotbox-cli -n iotbox-cli
+    distrobox enter iotbox-cli
+    
 ## Verification
 
 These images are signed with sisgstore's [cosign](https://docs.sigstore.dev/quickstart/quickstart-cosign/). You can verify the signature by downloading the `cosign.pub` key from this repo and running the following command:
 
-    cosign verify --key cosign.pub ghcr.io/pliveyns/blubox-cli
+    cosign verify --key cosign.pub ghcr.io/pliveyns/bluebox-cli
+    cosign verify --key cosign.pub ghcr.io/pliveyns/iotbox-cli
     
