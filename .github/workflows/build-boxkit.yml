@@ -25,6 +25,7 @@ jobs:
       matrix:
         containerfile: 
           - bluebox-cli
+          - iotbox-cli
     steps:
       # Checkout push-to-registry action GitHub repository
       - name: Checkout Push to Registry action

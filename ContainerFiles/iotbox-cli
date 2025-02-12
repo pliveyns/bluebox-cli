@@ -11,7 +11,7 @@ COPY ../packages/iotbox_*.packages /
 
 # Run the setup scripts
 RUN chmod +x *_packages.sh && \
-    /dnf_packages.sh && \
-    /bin_packages.sh &&\
-    /pip_packages.sh &&\
+    /dnf_packages.sh /iotbox_dnf.packages && \
+    /bin_packages.sh /iotbox_bin.packages && \
+    /pip_packages.sh /iotbox_pip.packages && \
     rm /*_packages.sh /iotbox_*.packages

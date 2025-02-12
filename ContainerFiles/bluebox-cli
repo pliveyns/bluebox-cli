@@ -11,8 +11,8 @@ COPY ../packages/bluebox_*.packages /
 
 # Run the setup scripts
 RUN chmod +x *_packages.sh && \
-    /dnf_packages.sh && \
+    /dnf_packages.sh /bluebox_dnf.packages && \
     /bin_packages.sh /bluebox_bin.packages &&\
-    /rpm_packages.sh &&\
-    /tar_packages.sh &&\
+    /rpm_packages.sh /bluebox_rpm.packages &&\
+    /tar_packages.sh /bluebox_tar.packages &&\
     rm /*_packages.sh /bluebox_*.packages

@@ -5,7 +5,7 @@
 
 echo "--- Installing pip packages defined in <toolbox>_pip.packages ---"
 
-grep -v '^#' ./iotbox_pip.packages | xargs python3 -m pip install -U
+grep -v '^#' $1 | xargs python3 -m pip install -U
 
 echo "---"
 
