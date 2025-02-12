@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 #
-# Install binary packages from bluebox_bin.packages
+# Install binary packages from <toolbox>_bin.packages
 #
 
-echo "--- Installing binary packages from download link in bluebox_bin.packages --"
+echo "--- Installing binary packages from download link in <toolbox>_bin.packages --"
 
-binary_packages=/bluebox_bin.packages
+binary_packages=$1
 while IFS= read -r pkg; do
   bin=$(echo "$pkg" | cut -d':' -f1 -)
   url=$(echo "$pkg" | cut -d' ' -f2 -)

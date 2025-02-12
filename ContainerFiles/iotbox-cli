@@ -2,17 +2,16 @@ FROM quay.io/fedora/fedora-toolbox:latest
 
 LABEL com.github.containers.toolbox="true" \
       usage="This image is meant to be used with the toolbox or distrobox command" \
-      summary="This is my main toolbox cli container." \
+      summary="This is my iot toolbox cli container." \
       maintainer="peter.liveyns@gmail.com"
 
 # Copy the setup scripts and package list
 COPY ../scripts/*_packages.sh /
-COPY ../packages/bluebox_*.packages /
+COPY ../packages/iotbox_*.packages /
 
 # Run the setup scripts
 RUN chmod +x *_packages.sh && \
     /dnf_packages.sh && \
-    /bin_packages.sh /bluebox_bin.packages &&\
-    /rpm_packages.sh &&\
-    /tar_packages.sh &&\
-    rm /*_packages.sh /bluebox_*.packages
+    /bin_packages.sh &&\
+    /pip_packages.sh &&\
+    rm /*_packages.sh /iotbox_*.packages
