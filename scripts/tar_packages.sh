@@ -16,7 +16,7 @@ while IFS= read -r pkg; do
   mv $bin /usr/local/bin/
   chmod +x /usr/local/bin/$bin
   cd /
-done < "$binary_packages"
+done < "$tar_packages"
 
 echo "---"
 
