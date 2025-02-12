@@ -6,7 +6,7 @@
 echo "--- Installing binary packages from download link in bluebox_bin.packages --" && \
 
 binary_packages=/bluebox_bin.packages && \
-while IFS= read i -r pkg; do \
+while IFS= read -r pkg; do \
   bin=$(echo "$pkg" | cut -d':' -f1 -); \
   url=$(echo "$pkg" | cut -d' ' -f2 -); \
   echo "Installing: ${bin}" && \
