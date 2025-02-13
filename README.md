@@ -16,7 +16,7 @@ Check out https://github.com/ublue-os/boxkit to create your own.
 - The package lists for the setup scripts (if needed) are stored in the `packages/` folder.
 - The Github workflow that generates the images is `.github/workflows/build-boxkit.yml`
 
-## Using the custom images
+### Using the custom images
 
 Toolbox bluebox-cli:
 
