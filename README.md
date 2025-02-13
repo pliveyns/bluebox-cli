@@ -20,13 +20,18 @@ Check out https://github.com/ublue-os/boxkit to create your own.
 
 Toolbox bluebox-cli:
 
-    distrobox create -i ghcr.io/pliveyns/bluebox-cli -n bluebox-cli
-    distrobox enter bluebox-cli
+    toolbox create -i ghcr.io/pliveyns/bluebox-cli -c bluebox-cli
+    toolbox enter bluebox-cli
     
 Toolbox iotbox-cli:
 
-    distrobox create -i ghcr.io/pliveyns/iotbox-cli -n iotbox-cli
-    distrobox enter iotbox-cli
+    toolbox create -i ghcr.io/pliveyns/iotbox-cli -c iotbox-cli
+    toolbox enter iotbox-cli
+    
+Toolbox kalibox-cli:
+
+    distrobox create --root -i ghcr.io/pliveyns/kalibox-cli -n kalibox-cli
+    distrobox enter --root iotbox-cli
     
 ## Verification
 
@@ -34,4 +39,5 @@ These images are signed with sisgstore's [cosign](https://docs.sigstore.dev/quic
 
     cosign verify --key cosign.pub ghcr.io/pliveyns/bluebox-cli
     cosign verify --key cosign.pub ghcr.io/pliveyns/iotbox-cli
+    cosign verify --key cosign.pub ghcr.io/pliveyns/kalibox-cli
     
