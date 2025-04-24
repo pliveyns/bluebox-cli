@@ -6,7 +6,7 @@
 echo "--- Installing DNF packages defined in <toolbox>_dnf.packages --"
 
 dnf update -y
-grep -v '^#' $1 | xargs dnf install -y
+grep -v '^#' $1 | xargs dnf install --skip-unavailable -y
 
 echo "---"
 
