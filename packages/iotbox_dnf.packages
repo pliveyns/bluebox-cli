@@ -4,6 +4,7 @@ fastfetch
 bat
 ripgrep
 eza
+lsd
 tio
 python3
 python3-pip

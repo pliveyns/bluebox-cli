@@ -16,6 +16,7 @@ pandoc
 ripgrep
 tig
 eza
+lsd
 speedtest-cli
 dbus-x11
 direnv
