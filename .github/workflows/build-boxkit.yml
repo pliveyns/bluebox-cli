@@ -27,7 +27,7 @@ jobs:
           - bluebox-cli
           - iotbox-cli
           #- kalibox-cli
-          - bluefin-cli
+          #- bluefin-cli
     steps:
       # Checkout push-to-registry action GitHub repository
       - name: Checkout Push to Registry action
