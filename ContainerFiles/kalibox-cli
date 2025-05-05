@@ -5,11 +5,11 @@ LABEL com.github.containers.toolbox="true" \
       summary="This is my kali toolbox cli container." \
       maintainer="peter.liveyns@gmail.com"
 
-## Copy the setup scripts and package list
-#COPY ../scripts/*_packages.sh /
-#COPY ../packages/kalibox_*.packages /
+# Copy the setup scripts and package list
+COPY ../scripts/*_packages.sh /
+COPY ../packages/kalibox_*.packages /
 
-## Run the setup scripts
-#RUN chmod +x *_packages.sh && \
-#    /apt_packages.sh /kalibox_apt.packages && \
-#    rm /*_packages.sh /kalibox_*.packages
+# Run the setup scripts
+RUN chmod +x *_packages.sh && \
+    /apt_packages.sh /kalibox_apt.packages && \
+    rm /*_packages.sh /kalibox_*.packages
