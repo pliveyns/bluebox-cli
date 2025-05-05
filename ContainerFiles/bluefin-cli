@@ -1,0 +1,18 @@
+FROM ghcr.io/ublue-os/bluefin-cli:latest
+
+LABEL com.github.containers.toolbox="true" \
+      usage="This image is meant to be used with the toolbox or distrobox command" \
+      summary="This is based on the bluefin-cli distrobox container." \
+      maintainer="peter.liveyns@gmail.com"
+
+## Copy the setup scripts and package list
+#COPY ../scripts/*_packages.sh /
+#COPY ../packages/bluebox_*.packages /
+
+## Run the setup scripts
+#RUN chmod +x *_packages.sh && \
+#    /dnf_packages.sh /bluebox_dnf.packages && \
+#    /bin_packages.sh /bluebox_bin.packages &&\
+#    /rpm_packages.sh /bluebox_rpm.packages &&\
+#    /tar_packages.sh /bluebox_tar.packages &&\
+#    rm /*_packages.sh /bluebox_*.packages
