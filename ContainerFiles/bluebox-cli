@@ -7,12 +7,16 @@ LABEL com.github.containers.toolbox="true" \
 
 # Copy the setup scripts and package list
 COPY ../scripts/*_packages.sh /
+COPY ../scripts/yazi.sh /
 COPY ../packages/bluebox_*.packages /
 
 # Run the setup scripts
 RUN chmod +x *_packages.sh && \
     /dnf_packages.sh /bluebox_dnf.packages && \
-    /bin_packages.sh /bluebox_bin.packages &&\
-    /rpm_packages.sh /bluebox_rpm.packages &&\
-    /tar_packages.sh /bluebox_tar.packages &&\
-    rm /*_packages.sh /bluebox_*.packages
+    /bin_packages.sh /bluebox_bin.packages && \
+    /rpm_packages.sh /bluebox_rpm.packages && \
+    /tar_packages.sh /bluebox_tar.packages && \
+    rm /*_packages.sh /bluebox_*.packages && \
+    chmod +x yazi.sh && \
+    /yazi.sh && rm /yazi.sh
+
