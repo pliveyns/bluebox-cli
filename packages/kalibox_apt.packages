@@ -19,4 +19,6 @@ arpwatch
 netdiscover
 speedtest-cli
 arpwatch
-netdiscover
+dnsutils
+net-tools
+
