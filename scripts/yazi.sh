@@ -5,7 +5,7 @@
 
 echo "--- Installing yazi from copr repo"
 
-dnf copr enable -y lihaohong/yazi &&
-  dnf install -y yazi
+dnf copr enable -y lihaohong/yazi
+dnf --enablerepo copr:copr.fedorainfracloud.org:lihaohong:yazi install -y yazi
 
 echo "---"
