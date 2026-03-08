@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 #
-# Install dnf packages from <toolbox>_dnf.packages
+# Install yazi cli file manager
 #
 
 echo "--- Installing yazi from copr repo"
 
-dnf copr enable -y lihaohong/yazi
-dnf install -y yazi
+dnf copr enable -y lihaohong/yazi &&
+  dnf install -y yazi
 
 echo "---"
