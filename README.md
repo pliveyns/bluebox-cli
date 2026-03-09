@@ -20,18 +20,18 @@ Check out https://github.com/ublue-os/boxkit to create your own.
 
 Toolbox bluebox-cli:
 
-    toolbox create -i ghcr.io/pliveyns/bluebox-cli -c bluebox-cli
-    toolbox enter bluebox-cli
+    toolbox create -i ghcr.io/pliveyns/bluebox-cli -c bluebox
+    toolbox enter bluebox
     
 Toolbox iotbox-cli:
 
-    toolbox create -i ghcr.io/pliveyns/iotbox-cli -c iotbox-cli
-    toolbox enter iotbox-cli
+    toolbox create -i ghcr.io/pliveyns/iotbox-cli -c iotbox
+    toolbox enter iotbox
     
 Toolbox kalibox-cli:
 
-    distrobox create --root -i ghcr.io/pliveyns/kalibox-cli -n kalibox-cli
-    distrobox enter --root iotbox-cli
+    distrobox create --root -i ghcr.io/pliveyns/kalibox-cli -n kalibox
+    distrobox enter --root iotbox
     
 ## Verification
 
